@@ -1,0 +1,92 @@
+Fri May 22 14:13:39 UTC 2026 - Executing "python3 /openLANE_flow/scripts/extract_metal_layers.py -t /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/met_layers_list.txt"
+
+Fri May 22 14:13:39 UTC 2026 - Executing "/openLANE_flow/scripts/mergeLef.py -i /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef} -o /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Fri May 22 14:13:39 UTC 2026 - Executing "/openLANE_flow/scripts/libtrim.pl /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/trimmed.lib.exclude.list > /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/trimmed.lib"
+
+Fri May 22 14:13:39 UTC 2026 - Executing "echo {openlane v0.21} > /openLANE_flow/designs/fft_project/radix2/runs/final_run/OPENLANE_VERSION"
+
+Fri May 22 14:13:44 UTC 2026 - Executing "sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib"
+
+Fri May 22 14:13:44 UTC 2026 - Executing "yosys -c /openLANE_flow/scripts/synth.tcl -l /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/synthesis/1-yosys.log |& tee >&@stdout"
+
+Fri May 22 14:14:07 UTC 2026 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:14:07 UTC 2026 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 0/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:14:07 UTC 2026 - Executing "sed -i /defparam/d /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/synthesis/fft16_r2.synthesis.v"
+
+Fri May 22 14:14:07 UTC 2026 - Executing "sta /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/synthesis/2-opensta"
+
+Fri May 22 14:14:16 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_floorplan.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/floorplan/3-verilog2def.openroad.log"
+
+Fri May 22 14:14:17 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_ioplacer.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/floorplan/4-ioPlacer.log"
+
+Fri May 22 14:14:18 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_tapcell.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/floorplan/5-tapcell.log"
+
+Fri May 22 14:14:19 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/floorplan/fft16_r2.floorplan.def |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/klayout/6-klayout.scrot.log"
+
+Fri May 22 14:14:24 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_pdn.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/floorplan/7-pdn.log"
+
+Fri May 22 14:16:11 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_replace.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/placement/8-replace.log"
+
+Fri May 22 14:16:18 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_resizer.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/placement/8-resizer.log"
+
+Fri May 22 14:16:23 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/9-write_verilog.log"
+
+Fri May 22 14:16:24 UTC 2026 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis_optimized.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:16:24 UTC 2026 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:16:24 UTC 2026 - Executing "sta /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/synthesis/10-opensta_post_resizer"
+
+Fri May 22 14:16:25 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_opendp.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/placement/11-opendp.log"
+
+Fri May 22 14:16:26 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/placement/fft16_r2.placement.def |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/klayout/12-klayout.scrot.log"
+
+Fri May 22 14:16:50 UTC 2026 - Executing "/openLANE_flow/scripts/libtrim.pl /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/cts.lib.exclude.list > /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/cts.lib"
+
+Fri May 22 14:16:50 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_cts.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/cts/13-cts.log"
+
+Fri May 22 14:17:33 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/14-write_verilog.log"
+
+Fri May 22 14:17:33 UTC 2026 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis_cts.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:17:33 UTC 2026 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis_optimized.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:17:33 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/cts/fft16_r2.cts.def |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/klayout/15-klayout.scrot.log"
+
+Fri May 22 14:17:44 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_groute.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/routing/16-fastroute.log"
+
+Fri May 22 14:17:58 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_fill.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/routing/17-addspacers.log"
+
+Fri May 22 14:17:59 UTC 2026 - Executing "openroad -exit /openLANE_flow/scripts/openroad/or_write_verilog.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/18-write_verilog.log"
+
+Fri May 22 14:18:00 UTC 2026 - Executing "sed -i -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis_preroute.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:18:00 UTC 2026 - Executing "sed -i -e {s/\(set ::env(PREV_NETLIST)\).*/\1 \/openLANE_flow\/designs\/fft_project\/radix2\/runs\/final_run\/results\/synthesis\/fft16_r2.synthesis_cts.v/} /openLANE_flow/designs/fft_project/radix2/runs/final_run/config.tcl"
+
+Fri May 22 14:18:00 UTC 2026 - Executing "envsubst < /openLANE_flow/scripts/tritonRoute.param > /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/routing/19-tritonRoute.param"
+
+Fri May 22 14:18:00 UTC 2026 - Executing "TritonRoute /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/routing/19-tritonRoute.param |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/routing/19-tritonRoute.log"
+
+Fri May 22 14:27:26 UTC 2026 - Executing "python3 /openLANE_flow/scripts/tr2klayout.py -i /openLANE_flow/designs/fft_project/radix2/runs/final_run/reports/routing/19-tritonRoute.drc -o /openLANE_flow/designs/fft_project/radix2/runs/final_run/reports/routing/19-tritonRoute.klayout.xml --design-name fft16_r2"
+
+Fri May 22 14:27:26 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/routing/fft16_r2.def |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/klayout/20-klayout.scrot.log"
+
+Fri May 22 14:27:33 UTC 2026 - Executing "python3 /openLANE_flow/scripts/spef_extractor/main.py -l /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/merged_unpadded.lef -d /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/routing/fft16_r2.def -mw L -ec 1 |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/routing/21-spef_extraction.log"
+
+Fri May 22 14:27:41 UTC 2026 - Executing "sta /openLANE_flow/scripts/sta.tcl |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/synthesis/22-opensta_spef"
+
+Fri May 22 14:44:13 UTC 2026 - Executing "magic -noconsole -dnull -rcfile /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/mag_gds.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/magic/23-magic.log"
+
+Fri May 22 14:44:30 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/final_run/results/magic/fft16_r2.gds |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/klayout/24-klayout.scrot.log"
+
+Fri May 22 14:44:35 UTC 2026 - Executing "magic -noconsole -dnull -rcfile /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/gds_pointers.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/magic/25-magic.mag.gds_ptrs.log"
+
+Fri May 22 14:44:45 UTC 2026 - Executing "sed -i -n {/^<< properties >>/,/^<< end >>/p} /openLANE_flow/designs/fft_project/radix2/runs/final_run/tmp/magic/magic_gds_ptrs.mag"
+
+Fri May 22 14:44:45 UTC 2026 - Executing "magic -noconsole -dnull -rcfile /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/lef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/magic/26-magic.lef.log"
+
+Fri May 22 14:45:02 UTC 2026 - Executing "magic -noconsole -dnull -rcfile /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/maglef.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/final_run/logs/magic/27-magic.maglef.log"
+

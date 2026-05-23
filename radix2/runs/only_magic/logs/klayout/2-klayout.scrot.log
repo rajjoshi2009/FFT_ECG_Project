@@ -1,0 +1,4 @@
+Using Techfile: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt
+Using layout file: /openLANE_flow/designs/fft_project/radix2/runs/only_magic/results/magic/fft16_r2.gds
+ERROR: /openLANE_flow/scripts/klayout/scrotLayout.py:34: Unable to open file: /openLANE_flow/designs/fft_project/radix2/runs/only_magic/results/magic/fft16_r2.gds (errno=2) in MainWindow.load_layout
+  /openLANE_flow/scripts/klayout/scrotLayout.py:34 (class exceptions.RuntimeError)

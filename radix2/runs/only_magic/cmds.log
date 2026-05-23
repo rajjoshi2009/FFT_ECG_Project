@@ -1,0 +1,12 @@
+Fri May 22 19:05:53 UTC 2026 - Executing "python3 /openLANE_flow/scripts/extract_metal_layers.py -t /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef -o /openLANE_flow/designs/fft_project/radix2/runs/only_magic/tmp/met_layers_list.txt"
+
+Fri May 22 19:05:53 UTC 2026 - Executing "/openLANE_flow/scripts/mergeLef.py -i /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd.tlef {/home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fill_12.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__decap_12.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd__fakediode_2.lef} -o /openLANE_flow/designs/fft_project/radix2/runs/only_magic/tmp/merged_unpadded.lef |& tee >&@stdout"
+
+Fri May 22 19:05:53 UTC 2026 - Executing "/openLANE_flow/scripts/libtrim.pl /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib /openLANE_flow/designs/fft_project/radix2/runs/only_magic/tmp/trimmed.lib.exclude.list > /openLANE_flow/designs/fft_project/radix2/runs/only_magic/tmp/trimmed.lib"
+
+Fri May 22 19:05:53 UTC 2026 - Executing "echo {openlane v0.21} > /openLANE_flow/designs/fft_project/radix2/runs/only_magic/OPENLANE_VERSION"
+
+Fri May 22 19:05:57 UTC 2026 - Executing "magic -noconsole -dnull -rcfile /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.magicrc /openLANE_flow/scripts/magic/mag_gds.tcl </dev/null |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/only_magic/logs/magic/1-magic.log"
+
+Fri May 22 19:05:57 UTC 2026 - Executing "bash /openLANE_flow/scripts/klayout/scrotLayout.sh /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/klayout/sky130A.lyt /openLANE_flow/designs/fft_project/radix2/runs/only_magic/results/magic/fft16_r2.gds |& tee >&@stdout /openLANE_flow/designs/fft_project/radix2/runs/only_magic/logs/klayout/2-klayout.scrot.log"
+

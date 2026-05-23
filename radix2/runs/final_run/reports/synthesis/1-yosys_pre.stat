@@ -1,0 +1,27 @@
+
+14. Printing statistics.
+
+=== fft16_r2 ===
+
+   Number of wires:              10153
+   Number of wire bits:          11340
+   Number of public wires:          22
+   Number of public wire bits:     635
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:              11239
+     $_ANDNOT_                    3285
+     $_AND_                        348
+     $_DFFE_PN0P_                  586
+     $_DFF_PN0_                     10
+     $_DFF_PN1_                      1
+     $_MUX_                       1052
+     $_NAND_                        58
+     $_NOR_                        954
+     $_NOT_                        206
+     $_ORNOT_                      377
+     $_OR_                        1756
+     $_XNOR_                       868
+     $_XOR_                       1738
+
