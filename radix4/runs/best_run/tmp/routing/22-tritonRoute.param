@@ -1,0 +1,11 @@
+lef:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/merged_unpadded.lef
+def:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/routing/20-fastroute.def
+guide:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/routing/20-fastroute.guide
+output:/openLANE_flow/designs/fft_project/radix4/runs/best_run/results/routing/fft16_r4.def
+outputTA:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/routing/22-tritonRoute_TA.def
+outputguide:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/routing/22-tritonRoute.guide
+outputDRC:/openLANE_flow/designs/fft_project/radix4/runs/best_run/reports/routing/22-tritonRoute.drc
+outputMaze:/openLANE_flow/designs/fft_project/radix4/runs/best_run/tmp/routing/22-tritonRoute_maze.log
+threads:4
+verbose:1
+drouteEndIterNum:64

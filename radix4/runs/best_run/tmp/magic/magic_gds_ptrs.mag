@@ -1,0 +1,6 @@
+<< properties >>
+string FIXED_BBOX 0 0 144804 146948
+string GDS_FILE /openLANE_flow/designs/fft_project/radix4/runs/best_run/results/magic/fft16_r4.gds
+string GDS_END 55087890
+string GDS_START 1301948
+<< end >>

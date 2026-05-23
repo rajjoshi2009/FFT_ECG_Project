@@ -1,0 +1,18 @@
+Design Name: fft16_r4
+Run Directory: /openLANE_flow/designs/fft_project/radix4/runs/best_run
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openLANE_flow/designs/fft_project/radix4/runs/best_run/reports/magic//32-magic.drc
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openLANE_flow/designs/fft_project/radix4/runs/best_run/results/lvs/fft16_r4.lvs_parsed.lef.log
+    net count difference = 6
+    unmatched nets = 1
+Total errors = 7
+----------------------------------------
+
+Antenna Summary:
+No antenna report found.
