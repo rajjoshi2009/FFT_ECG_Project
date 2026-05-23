@@ -8,7 +8,7 @@
 
 This project implements a **16-point FFT processor** in two architectures:
 - ✅ **Radix-2 DIT** — Completed, silicon-ready GDS generated
-- 🔄 **Radix-4 Pipelined** — In progress
+- ✅ **Radix-4 Pipelined** — Completed , silicon-ready GDS Generated
 
 The primary application is **ECG signal processing** — extracting frequency-domain features from cardiac signals for real-time anomaly detection in wearable health devices.
 
