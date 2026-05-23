@@ -50,7 +50,7 @@ Output (16 complex bins)
 
 Before RTL implementation, the fixed-point architecture was validated in MATLAB:
 - Floating-point FFT reference model built
-- Fixed-point model with twiddle factor quantization
+- Fixed-point model with twiddle factor quantisation
 - **SQNR analysis** — Signal-to-Quantization-Noise Ratio computed across word lengths
 - MIT-BIH ECG database used as test input
 
@@ -74,8 +74,21 @@ Before RTL implementation, the fixed-point architecture was validated in MATLAB:
 ```
 RTL (Verilog) → Synthesis (Yosys) → Floorplan → Placement → CTS → Routing → GDS ✅
 ```
-
 ---
+## Layout Images
+
+### Full Chip GDS Image
+![GDS IMAGE](images/radix2/gdsimages.png)
+
+### Routing View
+![ROUTING_IMAGE](images/radix2/fft16_r2.def.png)
+
+### Placement View
+![Placement_Image](images/radix2/fft16_r2.placement.def.png)
+
+### Floorplan View
+![floorplan_images](images/radix2/fft16_r2.floorplan.def.png)
+
 
 ## Tools Used
 
@@ -87,7 +100,7 @@ RTL (Verilog) → Synthesis (Yosys) → Floorplan → Placement → CTS → Rout
 | Magic | DRC, layout viewing |
 | KLayout | GDS visualization |
 | Sky130A PDK | Open-source process design kit |
-| MATLAB | Fixed-point modeling and SQNR validation |
+| MATLAB | Fixed-point modelling and SQNR validation |
 | Cadence Xcelium | RTL simulation |
 | Cadence Genus/Innovus | Custom IC flow (planned) |
 
